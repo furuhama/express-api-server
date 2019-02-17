@@ -7,7 +7,7 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize('sample_db', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
-  operatorAliases: false,
+  operatorsAliases: false,
 
   pool: {
     max: 5,
