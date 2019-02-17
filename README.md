@@ -2,6 +2,11 @@
 
 Simple API server.
 
+## Requirement
+
+- start mysql server on localhost
+- create database named `sample_db`
+
 ## Usage
 
 Start server
