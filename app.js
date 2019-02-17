@@ -1,7 +1,7 @@
 // === Initialize Express & Sequelize ===
 
-var express = require("express");
-var app = express();
+const express = require("express");
+const app = express();
 
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize('sample_db', 'root', '', {
@@ -17,7 +17,7 @@ const sequelize = new Sequelize('sample_db', 'root', '', {
   }
 });
 
-// === Define models ===
+// === Define models & seed data ===
 
 const Language = sequelize.define('languages', {
   name: {
@@ -47,7 +47,7 @@ Language.sync({ force: true }).then(() => {
 // == Start Server ===
 
 // Start server with port 3000
-var server = app.listen(3000, function(){
+const server = app.listen(3000, function(){
   console.log("Express Server is listening to PORT: " + server.address().port);
 
   // Check mysql database connection
